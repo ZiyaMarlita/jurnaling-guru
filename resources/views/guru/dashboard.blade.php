@@ -82,7 +82,7 @@
     {{-- JURNAL TERBARU --}}
     <div class="card">
         <div class="card-header d-flex justify-content-between align-items-center">
-            <span><i class="bi bi-clock-history me-2 text-success"></i>Jurnal Terbaru</span>
+            <span><i class="bi bi-clock-history me-2 text-success"></i>Jurnal Terbaru/Sekarang </span>
             <a href="{{ route('guru.jurnal.index') }}" class="btn btn-sm btn-outline-success">
                 Lihat Semua
             </a>
