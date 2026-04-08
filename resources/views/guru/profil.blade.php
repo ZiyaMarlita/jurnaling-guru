@@ -5,7 +5,6 @@
 @section('content')
 
 <div class="p-4 fade-up">
-
     <div class="row justify-content-center">
     <div class="col-lg-8">
 
@@ -50,12 +49,11 @@
                         src="{{ ($guru && $guru->foto) ? asset('storage/'.$guru->foto) : 'https://ui-avatars.com/api/?name='.urlencode($user->nama_lengkap).'&background=059669&color=fff&size=200' }}"
                         id="previewFoto"
                         class="rounded-circle"
-                        style="width:90px;height:90px;object-fit:cover;border:3px solid var(--border);box-shadow:var(--shadow);"
+                        style="width:100px;height:100px;object-fit:cover;border:3px solid #059669;display:block;margin:0 auto;"
                         alt="Foto Profil"
                     >
-                    <div style="font-size:12px;color:var(--text-muted);margin-top:8px;">
-                        Klik "Foto Profil" di bawah untuk mengganti
-                    </div>
+                    <div class="mt-2" style="font-size:13px;color:var(--text-muted);">{{ $user->nama_lengkap }}</div>
+                    <div style="font-size:12px;color:var(--text-muted);">{{ $guru->jabatan ?? 'Guru' }}</div>
                 </div>
 
                 <form action="{{ route('guru.profil.update') }}" method="POST" enctype="multipart/form-data">
@@ -142,7 +140,6 @@
 
     </div>
     </div>
-
 </div>
 
 @push('scripts')
