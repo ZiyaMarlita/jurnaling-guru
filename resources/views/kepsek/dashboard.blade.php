@@ -7,15 +7,14 @@
 <div class="p-4 fade-up">
 
     {{-- WELCOME HEADER --}}
-    <div class="card mb-4" style="background:linear-gradient(135deg,#080f1e 0%,#0d1f3c 60%,#0a2218 100%);border:none !important;overflow:hidden;position:relative;">
-        <div style="position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(16,185,129,0.15) 0%,transparent 60%);pointer-events:none;"></div>
+    <div class="card mb-4" style="background:linear-gradient(135deg,#047857 0%,#059669 60%,#10b981 100%);border:none !important;overflow:hidden;position:relative;">
+        <div style="position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(255,255,255,0.08) 0%,transparent 60%);pointer-events:none;"></div>
         <div class="card-body p-4" style="position:relative;">
             <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
                 <div>
                     <div style="font-family:'Sora',sans-serif;font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.4px;">Dashboard Kepala Sekolah</div>
-                    <div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:2px;">Sistem Monitoring Jurnal Guru</div>
+                    <div style="font-size:13px;color:rgba(255,255,255,0.75);margin-top:2px;">Sistem Monitoring Jurnal Guru</div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -30,26 +29,26 @@
             <div class="row g-3 mb-3 stagger">
                 <div class="col-sm-6">
                     <div class="stat-box">
-                        <div style="width:42px;height:42px;background:var(--sapphire-bg);border-radius:var(--r8);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
-                            <i class="bi bi-people-fill" style="font-size:18px;color:var(--sapphire);"></i>
+                        <div style="width:42px;height:42px;background:#dbeafe;border-radius:var(--r8);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
+                            <i class="bi bi-people-fill" style="font-size:18px;color:#1d4ed8;"></i>
                         </div>
                         <div class="stat-title">Total Guru</div>
-                        <div class="stat-value" style="color:var(--sapphire);">{{ $totalGuru }}</div>
+                        <div class="stat-value" style="color:#1d4ed8;">{{ $totalGuru }}</div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="stat-box">
-                        <div style="width:42px;height:42px;background:var(--emerald-bg);border-radius:var(--r8);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
-                            <i class="bi bi-journal-text" style="font-size:18px;color:var(--jade);"></i>
+                        <div style="width:42px;height:42px;background:#d1fae5;border-radius:var(--r8);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
+                            <i class="bi bi-journal-text" style="font-size:18px;color:#059669;"></i>
                         </div>
                         <div class="stat-title">Total Jurnal</div>
-                        <div class="stat-value" style="color:var(--jade);">{{ $totalJurnal }}</div>
+                        <div class="stat-value" style="color:#059669;">{{ $totalJurnal }}</div>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="stat-box">
-                        <div style="width:42px;height:42px;background:var(--emerald-bg);border-radius:var(--r8);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
-                            <i class="bi bi-clipboard-check-fill" style="font-size:18px;color:var(--jade);"></i>
+                        <div style="width:42px;height:42px;background:#d1fae5;border-radius:var(--r8);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
+                            <i class="bi bi-clipboard-check-fill" style="font-size:18px;color:#059669;"></i>
                         </div>
                         <div class="stat-title">Total Evaluasi</div>
                         <div class="stat-value">{{ $totalEvaluasi }}</div>
@@ -57,11 +56,11 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="stat-box">
-                        <div style="width:42px;height:42px;background:var(--rose-bg);border-radius:var(--r8);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
-                            <i class="bi bi-exclamation-circle-fill" style="font-size:18px;color:var(--rose);"></i>
+                        <div style="width:42px;height:42px;background:#fff1f2;border-radius:var(--r8);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
+                            <i class="bi bi-exclamation-circle-fill" style="font-size:18px;color:#f43f5e;"></i>
                         </div>
                         <div class="stat-title">Belum Dievaluasi</div>
-                        <div class="stat-value" style="color:var(--rose);">{{ $belumEvaluasi }}</div>
+                        <div class="stat-value" style="color:#f43f5e;">{{ $belumEvaluasi }}</div>
                     </div>
                 </div>
             </div>
@@ -70,23 +69,23 @@
             <div class="row g-3">
                 <div class="col-md-6">
                     <div class="stat-box d-flex align-items-center gap-3 text-start" style="padding:16px 20px;">
-                        <div style="width:46px;height:46px;background:var(--amber-bg);border-radius:var(--r8);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                            <i class="bi bi-calendar-day" style="font-size:20px;color:var(--amber);"></i>
+                        <div style="width:46px;height:46px;background:#fffbeb;border-radius:var(--r8);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                            <i class="bi bi-calendar-day" style="font-size:20px;color:#f59e0b;"></i>
                         </div>
                         <div>
                             <div class="stat-title" style="text-align:left;">Jurnal Hari Ini</div>
-                            <div class="stat-value" style="color:var(--amber);font-size:26px;line-height:1;">{{ $jurnalHariIni }}</div>
+                            <div class="stat-value" style="color:#f59e0b;font-size:26px;line-height:1;">{{ $jurnalHariIni }}</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="stat-box d-flex align-items-center gap-3 text-start" style="padding:16px 20px;">
-                        <div style="width:46px;height:46px;background:var(--violet-bg);border-radius:var(--r8);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-                            <i class="bi bi-calendar-month" style="font-size:20px;color:var(--violet);"></i>
+                        <div style="width:46px;height:46px;background:#f5f3ff;border-radius:var(--r8);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                            <i class="bi bi-calendar-month" style="font-size:20px;color:#8b5cf6;"></i>
                         </div>
                         <div>
                             <div class="stat-title" style="text-align:left;">Jurnal Bulan Ini</div>
-                            <div class="stat-value" style="color:var(--violet);font-size:26px;line-height:1;">{{ $jurnalBulanIni }}</div>
+                            <div class="stat-value" style="color:#8b5cf6;font-size:26px;line-height:1;">{{ $jurnalBulanIni }}</div>
                         </div>
                     </div>
                 </div>
@@ -174,7 +173,6 @@
         const grid = document.getElementById('cal-grid');
         grid.innerHTML = '';
 
-        // Header hari
         days.forEach(d => {
             const el = document.createElement('div');
             el.textContent = d;
@@ -185,12 +183,10 @@
         const firstDay = new Date(year, month, 1).getDay();
         const totalDays = new Date(year, month + 1, 0).getDate();
 
-        // Kosong sebelum hari pertama
         for (let i = 0; i < firstDay; i++) {
             grid.appendChild(document.createElement('div'));
         }
 
-        // Isi tanggal
         for (let d = 1; d <= totalDays; d++) {
             const el = document.createElement('div');
             el.textContent = d;
@@ -207,13 +203,13 @@
                 padding:5px 2px;
                 border-radius:6px;
                 cursor:default;
-                color:${isToday ? '#fff' : isSun ? 'var(--rose)' : 'var(--ink)'};
-                background:${isToday ? 'var(--jade)' : 'transparent'};
+                color:${isToday ? '#fff' : isSun ? '#f43f5e' : 'var(--ink)'};
+                background:${isToday ? '#059669' : 'transparent'};
                 transition:background 0.15s;
             `;
 
             if (!isToday) {
-                el.addEventListener('mouseenter', () => el.style.background = 'var(--canvas)');
+                el.addEventListener('mouseenter', () => el.style.background = '#d1fae5');
                 el.addEventListener('mouseleave', () => el.style.background = 'transparent');
             }
 

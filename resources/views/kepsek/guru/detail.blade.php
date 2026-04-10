@@ -26,7 +26,7 @@
                     @if(optional($guru->guru)->foto)
                         <img src="{{ asset('storage/'.$guru->guru->foto) }}"
                              class="rounded-circle mb-3"
-                             style="width:90px;height:90px;object-fit:cover;border:3px solid var(--border);"
+                             style="width:90px;height:90px;object-fit:cover;border:3px solid var(--border);display:block;margin:0 auto;"
                              alt="Foto Guru">
                     @else
                         <div style="width:90px;height:90px;background:linear-gradient(135deg,var(--brand-light),#a7f3d0);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:32px;font-weight:800;color:var(--brand-deeper);">

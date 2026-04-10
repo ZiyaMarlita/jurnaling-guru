@@ -76,12 +76,12 @@
                         </div>
 
                         {{-- BUTTON LOGIN --}}
-                        <div class="d-grid mt-4">
-                            <button class="btn btn-success">
-                                <i class="bi bi-box-arrow-in-right"></i>
-                                Login
-                            </button>
-                        </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <button class="btn btn-success px-5">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            Login
+                        </button>
+                    </div>
 
                     </form>
 

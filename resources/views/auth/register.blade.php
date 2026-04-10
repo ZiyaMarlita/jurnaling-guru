@@ -142,12 +142,12 @@
                             </div>
                         </div>
 
-                        {{-- BUTTON --}}
-                        <div class="d-grid mt-4">
-                            <button type="submit" class="btn btn-success">
-                                <i class="bi bi-person-plus"></i> Daftar
-                            </button>
-                        </div>
+                   {{-- BUTTON --}}
+                    <div class="d-flex justify-content-center mt-4">
+                        <button type="submit" class="btn btn-success px-5">
+                            <i class="bi bi-person-plus"></i> Daftar
+                        </button>
+                    </div>
 
                     </form>
 

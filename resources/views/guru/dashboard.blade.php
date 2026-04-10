@@ -7,27 +7,29 @@
 <div class="p-4 fade-up">
 
     {{-- HEADER WELCOME --}}
-    <div class="card mb-4" style="background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#0f4c3a 100%);border:none !important;overflow:hidden;position:relative;">
-        <div style="position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(5,150,105,0.15) 0%,transparent 60%);pointer-events:none;"></div>
+    <div class="card mb-4" style="background:linear-gradient(135deg,#047857 0%,#059669 60%,#10b981 100%);border:none !important;overflow:hidden;position:relative;">
+        <div style="position:absolute;inset:0;background:radial-gradient(circle at 80% 50%,rgba(255,255,255,0.08) 0%,transparent 60%);pointer-events:none;"></div>
         <div class="card-body p-4 d-flex justify-content-between align-items-center flex-wrap gap-3" style="position:relative;">
             <div class="d-flex align-items-center gap-3">
                 <img
-                    src="{{ $guru->foto ? asset('storage/'.$guru->foto) : 'https://ui-avatars.com/api/?name='.urlencode(Auth::user()->nama_lengkap).'&background=059669&color=fff&size=200' }}"
+                    src="{{ $guru->foto ? asset('storage/'.$guru->foto) : 'https://ui-avatars.com/api/?name='.urlencode(Auth::user()->nama_lengkap).'&background=ffffff&color=059669&size=200' }}"
                     width="60" height="60"
                     class="rounded-circle"
-                    style="border:2px solid rgba(255,255,255,0.2);object-fit:cover;"
+                    style="border:2px solid rgba(255,255,255,0.4);object-fit:cover;"
                     alt="Foto Profil"
                 >
                 <div>
                     <div style="font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.3px;">{{ Auth::user()->nama_lengkap }}</div>
-                    <div style="font-size:13px;color:rgba(255,255,255,0.6);">Guru &nbsp;•&nbsp; Selamat datang kembali 👋</div>
+                    <div style="font-size:13px;color:rgba(255,255,255,0.75);">Guru &nbsp;•&nbsp; Selamat datang kembali 👋</div>
                 </div>
             </div>
             <div class="d-flex gap-2">
-                <a href="{{ route('guru.profil.index') }}" class="btn btn-sm" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:#fff;font-weight:600;">
+                <a href="{{ route('guru.profil.index') }}" class="btn btn-sm"
+                   style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;font-weight:600;">
                     <i class="bi bi-person"></i> Profil
                 </a>
-                <a href="{{ route('guru.jurnal.create') }}" class="btn btn-sm btn-success">
+                <a href="{{ route('guru.jurnal.create') }}" class="btn btn-sm"
+                   style="background:#fff;border:none;color:#059669;font-weight:700;">
                     <i class="bi bi-plus-circle"></i> Tambah Jurnal
                 </a>
             </div>
@@ -39,8 +41,8 @@
 
         <div class="col-sm-6 col-md-3">
             <div class="stat-box">
-                <div style="width:42px;height:42px;background:var(--brand-light);border-radius:var(--r);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
-                    <i class="bi bi-journal-check" style="font-size:18px;color:var(--brand);"></i>
+                <div style="width:42px;height:42px;background:#d1fae5;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
+                    <i class="bi bi-journal-check" style="font-size:18px;color:#059669;"></i>
                 </div>
                 <div class="stat-title">Total Jurnal</div>
                 <div class="stat-value">{{ $totalJurnal ?? 0 }}</div>
@@ -49,7 +51,7 @@
 
         <div class="col-sm-6 col-md-3">
             <div class="stat-box">
-                <div style="width:42px;height:42px;background:#dbeafe;border-radius:var(--r);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
+                <div style="width:42px;height:42px;background:#dbeafe;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
                     <i class="bi bi-calendar2-week" style="font-size:18px;color:#1d4ed8;"></i>
                 </div>
                 <div class="stat-title">Bulan Ini</div>
@@ -59,21 +61,21 @@
 
         <div class="col-sm-6 col-md-3">
             <div class="stat-box">
-                <div style="width:42px;height:42px;background:#fef3c7;border-radius:var(--r);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
-                    <i class="bi bi-star-fill" style="font-size:18px;color:var(--warning);"></i>
+                <div style="width:42px;height:42px;background:#fef3c7;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
+                    <i class="bi bi-star-fill" style="font-size:18px;color:#f59e0b;"></i>
                 </div>
                 <div class="stat-title">Rata-rata Nilai</div>
-                <div class="stat-value" style="color:var(--warning);">{{ $rataRata ? number_format($rataRata, 1) : '—' }}</div>
+                <div class="stat-value" style="color:#f59e0b;">{{ $rataRata ? number_format($rataRata, 1) : '—' }}</div>
             </div>
         </div>
 
         <div class="col-sm-6 col-md-3">
             <div class="stat-box">
-                <div style="width:42px;height:42px;background:var(--bg);border-radius:var(--r);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
-                    <i class="bi bi-activity" style="font-size:18px;color:var(--text-muted);"></i>
+                <div style="width:42px;height:42px;background:#ecfdf5;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">
+                    <i class="bi bi-activity" style="font-size:18px;color:#10b981;"></i>
                 </div>
                 <div class="stat-title">Status Terakhir</div>
-                <div class="stat-value" style="font-size:18px;text-transform:capitalize;color:var(--text-primary);">{{ $statusTerakhir ?? '—' }}</div>
+                <div class="stat-value" style="font-size:18px;text-transform:capitalize;color:#047857;">{{ $statusTerakhir ?? '—' }}</div>
             </div>
         </div>
 
@@ -101,7 +103,7 @@
                 @forelse($jurnalTerbaru as $item)
                     <tr style="cursor:pointer;" onclick="window.location='{{ route('guru.jurnal.show', $item->id) }}'">
                         <td>
-                            <span style="font-weight:600;color:var(--brand);">{{ $item->mata_pelajaran }}</span>
+                            <span style="font-weight:600;color:#059669;">{{ $item->mata_pelajaran }}</span>
                         </td>
                         <td>{{ $item->kelas }}</td>
                         <td>{{ $item->tanggal->format('d M Y') }}</td>
